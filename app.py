@@ -274,7 +274,7 @@ def _print_notif(line):
 def _desktop_notify(title, message):
     if HAS_SYS_NOTIF:
         try:
-            sysnotif.notify(title=title, message=message, app_name="Botnet DM CLI", timeout=5)
+            sysnotif.notify(title=title, message=message, app_name="DM CLI", timeout=5)
         except Exception:
             pass
 
@@ -363,7 +363,7 @@ def notifier_loop():
 
 # ===== Main Loop =====
 def main():
-    print(Fore.CYAN + "Welcome to Botnet DM CLI\n" + Style.RESET_ALL)
+    print(Fore.CYAN + "Welcome to DM CLI\n" + Style.RESET_ALL)
     print("Commands: ls | cat <num> | send <username> <message> | notify on/off | interval <sec> | sync | exit | help")
 
     # Start notifier in background
@@ -467,3 +467,4 @@ EXAMPLES
 
 if __name__ == "__main__":
     main()
+
